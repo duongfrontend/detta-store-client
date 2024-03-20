@@ -103,7 +103,7 @@ const Navbar = () => {
         </Link>
 
         <Menu
-          className="cursor-pointer max-[1366px]:hidden"
+          className="cursor-pointer min-[1466px]:hidden"
           onClick={() => setDropdownMenu(!dropdownMenu)}
         />
 
