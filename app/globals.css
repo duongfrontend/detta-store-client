@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+:root {
+  height: 100%;
+}
+
+.text-cut {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.text-cut2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.5;
+}
+.animation-de {
+  transition: 0.3s linear;
+}
+.animation-de2 {
+  transition: 0.2s linear;
+}
+.grid-colse {
+  display: grid;
+  grid-template-columns: 8fr 1fr 1fr;
+}
+.cart-item {
+  position: absolute;
+  border-radius: 100px;
+  top: 5px;
+  left: 24px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hover-target:hover > .ok {
+  background-color: white;
+}
+.ant-image-mask {
+  display: none !important;
+}
+.box-sha {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.lines {
+  border-right: "1px solid #cccccc";
+}
