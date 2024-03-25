@@ -37,7 +37,7 @@ const ProductDetails = async ({
           <p className="text-heading3-bold">Sản Phẩm Liên Quan</p>
           <div
             // style={{ borderLeft: "1px solid #cccccc", overflowY: "auto" }}
-            className="flex flex-wrap justify-center items-center gap-16 mx-auto mt-8 h-[90%]">
+            className="flex flex-wrap justify-center items-center gap-16 mx-auto mt-8 h-[650px] overflow-auto">
             {relatedProducts?.map((product: ProductType) => (
               <ProductCard key={product._id} product={product} />
             ))}

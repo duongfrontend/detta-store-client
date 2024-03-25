@@ -140,7 +140,7 @@ const Navbar = () => {
                 target="_blank"
                 href={user ? "/products" : "/sign-in"}
                 className="hover:text-orange-600 animation-de2 flex items-center p-[10px]">
-                <ShoppingBag className="mr-[8px]" />
+                <Package2 className="mr-[8px]" />
                 Sản Phẩm
               </Link>
               <Link
