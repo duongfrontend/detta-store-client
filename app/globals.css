@@ -1,11 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap");
 
 html,
 body,
 :root {
   height: 100%;
+  /* font-family: "Trispace", sans-serif; */
+}
+body {
+  font-family: "Josefin Sans", sans-serif !important;
+  font-optical-sizing: auto;
+  letter-spacing: 0.5px;
 }
 
 .text-cut {
@@ -53,4 +61,118 @@ body,
 }
 .lines {
   border-right: "1px solid #cccccc";
+}
+.title-img {
+  background-image: url("https://gcs.tripi.vn/public-tripi/tripi-feed/img/474102KZV/background-cam-trang_052541131.jpg");
+  /* background-image: url("https://demoda.vn/wp-content/uploads/2022/01/background-vang-trang.jpg"); */
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center 62%;
+  padding: 5px 20px;
+  opacity: 0.8;
+  border-radius: 10px;
+  letter-spacing: 1.1px;
+  color: rgb(51, 51, 51);
+  transform: scaleX(-1);
+}
+.text-banner {
+  font-family: "Alexandria", sans-serif !important;
+  font-weight: 900;
+}
+.btn-banner {
+  border: 1px solid #434343;
+  border-radius: 10px;
+  padding: 10px 20px;
+  transition: 0.3s linear;
+}
+.btn-banner:hover {
+  border: none !important;
+  background-color: #000;
+}
+.btn-banner:hover > a {
+  color: white;
+}
+.btn-banner2 {
+  /* border: 1px solid #434343; */
+  border-radius: 10px;
+  padding: 11.1px 20px;
+  transition: 0.3s linear;
+  background-color: #000;
+  color: white;
+}
+.btn-banner2:hover {
+  background-color: #f97316;
+  /* border: 1px solid #434343; */
+}
+/* .btn-banner2:hover > a {
+  color: #434343;
+} */
+.scales {
+  transition: 0.3s linear;
+}
+.scales:hover {
+  transform: scale(1.1);
+  background-color: rgb(240, 171, 42);
+}
+/* .linees {
+  position: relative;
+} */
+.linees::before {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 1px;
+  background-color: #434343;
+  display: block;
+  top: 50%;
+  right: 105%;
+}
+.linees::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #434343;
+  display: block;
+  top: 50%;
+  left: 105%;
+}
+/* .hovers {
+  display: none;
+  position: absolute;
+  top: 100%;
+  z-index: 999;
+  background-color: #ea580c;
+  width: 100%;
+}
+.hovers::before {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  width: 100%;
+  height: 100px;
+  top: -20%;
+}
+#hover-link:hover ~ .hovers {
+  display: block !important;
+} */
+
+.animation-img:hover {
+  animation: scaleAnimation 0.5s linear alternate infinite;
+}
+
+@keyframes scaleAnimation {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.02);
+  }
+}
+
+.ant-image {
+  height: 100% !important;
+}
+.heights {
+  height: 100% !important;
 }

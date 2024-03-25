@@ -100,7 +100,7 @@ const ProductInfo = ({ productInfo }: { productInfo: ProductType }) => {
         </div>
 
         <button
-          className="  text-base-bold py-3 rounded-lg bg-orange-500 animation-de hover:bg-black hover:text-white"
+          className="  text-base-bold py-3 rounded-lg bg-black text-white animation-de hover:bg-orange-500"
           onClick={() => {
             cart.addItem({
               item: productInfo,

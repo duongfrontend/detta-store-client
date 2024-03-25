@@ -13,7 +13,7 @@ const Cart = () => {
   const cart = useCart();
 
   const total = cart.cartItems.reduce(
-    (acc, cartItem) => acc + cartItem.item.expense * cartItem.quantity,
+    (acc, cartItem) => acc + cartItem.item.price * cartItem.quantity,
     0
   );
   const totalRounded = parseFloat(total.toFixed(2));
@@ -54,7 +54,7 @@ const Cart = () => {
         ) : (
           <div>
             {cart.cartItems.map((cartItem) => (
-              <div className="w-full grid-colse max-sm:flex-col max-sm:gap-3 hover:bg-grey-1 px-4 py-3 items-center max-sm:items-center justify-between">
+              <div className="w-full grid-colse max-sm:flex max-sm:flex-col max-sm:gap-3 hover:bg-grey-1 px-4 py-3 items-center max-sm:items-center justify-between">
                 <div className="flex items-center">
                   <Image
                     src={cartItem.item.media[0]}

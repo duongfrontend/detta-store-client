@@ -1,5 +1,6 @@
 import ProductCard from "@/components/ProductCard";
 import { getCategory } from "@/lib/actions/actions";
+import Titles from "./Titles";
 
 const Categorys = async () => {
   const category = await getCategory();
@@ -7,20 +8,14 @@ const Categorys = async () => {
 
   return (
     <div className="flex flex-col gap-10 py-8 px-5 w-[100%] max-[554px]:px-[0] max-[554px]:w-[100vw]">
-      <div>
-        <p className="text-[35px] font-bold max-[554px]:pl-[12px]">
-          Sản Phẩm Nổi Bật
-        </p>
-      </div>
+      <Titles> Sản Phẩm Nổi Bật </Titles>
       {!category ? (
         <p className="text-body-bold">Không có dữ liệu</p>
       ) : (
-        <div className="flex justify-center items-center gap-16 max-[554px]:grid max-[554px]:grid-cols-2 max-[554px]:gap-0">
+        <div className="flex flex-wrap justify-center gap-10 max-[554px]: max-[554px]:flex max-[554px]: max-[1023px]:grid max-[1023px]:grid-cols-2">
           {category.products?.map((product: ProductType) => (
             <>
-              <div className="max-[554px]:flex max-[554px]:justify-center max-[554px]:items-center">
-                <ProductCard key={product._id} product={product} />
-              </div>
+              <ProductCard key={product._id} product={product} />
             </>
           ))}
         </div>
